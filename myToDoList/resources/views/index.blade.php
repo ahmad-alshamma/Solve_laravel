@@ -1,44 +1,4 @@
-    {{-- @extends('layout')
-    @section('content')
-    <div class="container text-start mt-5 mb-5">
-        <a href="{{route('notes.create')}}"><button type="button" class="btn btn-primary">Add Note</button></a>
-    </div>
-    
-    <table class="table container">
-        <thead>
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">to do</th>
-            <th scope="col">create_time</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-            @foreach ($notes as $note)
-            <tr>
-                <th scope="row">{{$note->id}}</th>
-                <td>{{$note->Note}}</td>
-                <td>{{$note->created_at}}</td>
-                <td>
-                   <a href="{{route('notes.edit',$note->id)}}"> <button type="button" class="btn btn-secondary">Edit</button></a>
-                   <form action="{{route('notes.destroy' , $note->id)}}" method="post" class="d-inline">
-                      @csrf
-                      @method('delete')
-                     <button type="submit" class="btn btn-danger">Delete</button>
-
-                   </form>
-                </td>
-              </tr>
-              
-            @endforeach
-          
-        </tbody>
-      </table>
-      
-      @endsection --}}
-
-
-      @extends('layout')
+@extends('layout')
 @section('content')
 <div class="container text-start mt-5 mb-5">
     <a href="{{ route('notes.create') }}"><button type="button" class="btn btn-primary">Add Note</button></a>
